@@ -24,47 +24,29 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This code is a React application that fetches location data from an API and displays it in a table. Here's a step-by-step guide on how to run and understand this code:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Setup Environment: Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
 
-### `npm run eject`
+Create React App: You can create a new React app using Create React App by running the following command in your terminal:
+All the city data is stored in MyComponent.js file 
+Understanding the Code:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The code uses React hooks such as useState, useEffect, and useRef for managing state and side effects.
+It fetches data from the Open Data Soft API (https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?limit=50) to get information about cities.
+The fetched data is stored in the locations state array.
+The filteredLocations state array holds the locations filtered based on the search query entered by the user.
+Pagination is implemented using the page state variable, which increments when the user scrolls near the bottom of the page.
+Sorting functionality is provided for the table columns. Clicking on a column header sorts the data based on that column.
+The handleCityNameRightClick function opens a new tab with the weather page for the clicked city on OpenWeatherMap.
+The JSX renders an input field for searching, a table with location data, and a loader element for indicating loading state.
+Testing:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open your browser and navigate to http://localhost:3000 (or another URL where your app is running) to see the application.
+Try searching for locations, sorting columns, and scrolling to trigger pagination.
+Customization:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can customize the CSS styles by modifying the App.css file.
+You can also modify the API endpoint or add more functionality as needed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For to fetch weather data you have to use WeatherApp.js File
