@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './MyComponent';
+import './WeatherPage'
+// import './TablePage';
+// import './Weather'
+// import './server'
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
