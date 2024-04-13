@@ -28,10 +28,12 @@ This code is a React application that fetches location data from an API and disp
 
 Setup Environment: Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
 
-Create React App: You can create a new React app using Create React App by running the following command in your terminal:
-All the city data is stored in MyComponent.js file 
-Understanding the Code:
+Create React App: 
+You can create a new React app using Create React App by running the following command in your terminal:
 
+All the city data is stored in MyComponent.js file 
+
+Understanding the Code:
 The code uses React hooks such as useState, useEffect, and useRef for managing state and side effects.
 It fetches data from the Open Data Soft API (https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?limit=50) to get information about cities.
 The fetched data is stored in the locations state array.
